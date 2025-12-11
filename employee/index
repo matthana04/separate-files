@@ -1,0 +1,8 @@
+<?php
+session_start();
+if ($_SESSION['role'] !== 'employee') {
+    header("Location: ../login.php");
+    exit;
+}
+echo "ยินดีต้อนรับพนักงาน: " . $_SESSION['fullname'];
+?>
