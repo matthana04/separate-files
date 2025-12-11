@@ -1,8 +1,0 @@
-<?php
-session_start();
-if ($_SESSION['role'] !== 'user') {
-    header("Location: ../login.php");
-    exit;
-}
-echo "ยินดีต้อนรับผู้ใช้ทั่วไป: " . $_SESSION['fullname'];
-?>
